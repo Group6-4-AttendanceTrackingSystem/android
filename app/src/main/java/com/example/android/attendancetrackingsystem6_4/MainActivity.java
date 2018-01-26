@@ -37,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Please show the QR code to your lecturer");
         setContentView(R.layout.activity_main);
         TextView textView = (TextView) findViewById(R.id.week);
         String week = getIntent().getStringExtra("week");
         String sessionKey = getIntent().getStringExtra("sessionKey");
         String email = getIntent().getStringExtra("email");
-        textView.setText("Attendance token of " + email + " for week " + week + ".");
+        textView.setText("Attendance token of " + email + " for week " + String.valueOf(Integer.parseInt(week)+1) + ".");
         try {
             final TextView mTextView = (TextView) findViewById(R.id.temptext);
 // Instantiate the RequestQueue.

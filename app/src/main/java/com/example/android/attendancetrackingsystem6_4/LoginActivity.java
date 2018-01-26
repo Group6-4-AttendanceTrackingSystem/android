@@ -324,8 +324,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
         else{
             //week sor intentle maine yolla
-            Intent intent = new Intent(getBaseContext(), MainActivity.class);
-            intent.putExtra("week","12");
+            Intent intent = new Intent(getBaseContext(), SelectWeekActivity.class);
             intent.putExtra("sessionKey",obj.getString("sessionKey"));
             intent.putExtra("email",obj.getString("email"));
             startActivity(intent);
