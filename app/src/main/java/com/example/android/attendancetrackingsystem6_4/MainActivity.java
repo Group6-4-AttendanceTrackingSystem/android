@@ -32,17 +32,17 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     private String STR = "";
-    private final int HEIGHT = 512;
-    private final int WIDTH = 512;
+    private final int HEIGHT = 1024;
+    private final int WIDTH = 1024;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        TextView textView = (TextView) findViewById(R.id.week);
         String week = getIntent().getStringExtra("week");
         String sessionKey = getIntent().getStringExtra("sessionKey");
         String email = getIntent().getStringExtra("email");
-
+        textView.setText("Attendance token of " + email + " for week " + week + ".");
         try {
             final TextView mTextView = (TextView) findViewById(R.id.temptext);
 // Instantiate the RequestQueue.

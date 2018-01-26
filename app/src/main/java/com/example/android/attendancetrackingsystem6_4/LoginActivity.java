@@ -325,7 +325,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         else{
             //week sor intentle maine yolla
             Intent intent = new Intent(getBaseContext(), MainActivity.class);
-            intent.putExtra("week","5");
+            intent.putExtra("week","12");
             intent.putExtra("sessionKey",obj.getString("sessionKey"));
             intent.putExtra("email",obj.getString("email"));
             startActivity(intent);
@@ -366,7 +366,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             @Override
                             public void onResponse(String response) {
                                 // Display the first 500 characters of the response string.
-                                mTextView.setText("Response is: "+ response);
+                                //mTextView.setText("Response is: "+ response);
                                 parseResponse(response);
                                 Log.v("response",response);
                             }

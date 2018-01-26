@@ -10,8 +10,14 @@
     tools:context="com.example.android.attendancetrackingsystem6_4.MainActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/qrCode"
-        />|
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/week"
+        android:layout_below="@id/qrCode"
+    />
 </RelativeLayout>
